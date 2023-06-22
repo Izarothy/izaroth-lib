@@ -1,5 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit';
-
 export interface searchPromptState {
   value: {lastKey: string; shown: boolean};
 }
@@ -18,10 +17,13 @@ export const searchPromptSlice = createSlice({
     toggle: state => {
       state.value.shown = !state.value.shown;
     },
+    setHidden: state => {
+      state.value.shown = false;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const {toggle} = searchPromptSlice.actions;
+export const {toggle, setHidden} = searchPromptSlice.actions;
 
 export default searchPromptSlice.reducer;
