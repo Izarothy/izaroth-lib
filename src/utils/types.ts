@@ -3,3 +3,9 @@ export type TPageLink = {
   path: string;
   category: string;
 };
+
+export type TPage = {
+  slug: string;
+  title: string;
+  content: string;
+};
