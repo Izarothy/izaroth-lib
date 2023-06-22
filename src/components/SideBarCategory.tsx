@@ -1,5 +1,5 @@
 import React from 'react';
-import pagesData from 'src/data/pages.json';
+import pagesData from '~/data/pages.json';
 import {type TPageLink} from '~/utils/types';
 import SideBarLink from './SideBarLink';
 

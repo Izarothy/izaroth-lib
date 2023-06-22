@@ -3,7 +3,7 @@ import SideBar from './SideBar';
 
 const Layout = (props: PropsWithChildren) => {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen text-white">
       <SideBar />
       <main className="w-full bg-dark">{props.children}</main>
     </div>
