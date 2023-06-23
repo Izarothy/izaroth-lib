@@ -1,19 +1,13 @@
-import React, {useEffect, type ReactNode} from 'react';
+import React, {type ReactNode} from 'react';
 import SideBar from './SideBar';
 import SearchPrompt from './SearchPrompt';
-import {useDispatch} from 'react-redux';
-import {setSidebarList} from '~/utils/slices/sidebarSlice';
 
 type Props = {
   children?: ReactNode;
   slugList?: string[];
 };
 
-const Layout = ({children, slugList}: Props) => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    slugList && dispatch(setSidebarList(slugList));
-  }, [dispatch, slugList]);
+const Layout = ({children}: Props) => {
   return (
     <div className="flex min-h-screen text-white">
       <SideBar />
