@@ -1,5 +1,5 @@
 ---
-Title: Asd
+title: Asd
 ---
 
 # Asdfg
