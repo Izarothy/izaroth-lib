@@ -12,7 +12,7 @@ const Layout = ({children}: Props) => {
     <div className="flex min-h-screen text-white">
       <SideBar />
       <SearchPrompt />
-      <main className="w-full bg-dark">{children}</main>
+      <main className="w-full bg-dark px-8 py-16">{children}</main>
     </div>
   );
 };
