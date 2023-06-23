@@ -14,4 +14,15 @@ export const postRouter = createTRPCRouter({
     }
     return postNames;
   }),
+
+  getAllPosts: publicProcedure.query(() => {
+    const posts = getAllPosts();
+    if (!posts?.length) {
+      throw new TRPCError({
+        code: 'NOT_FOUND',
+        message: 'No posts found',
+      });
+    }
+    return posts;
+  }),
 });

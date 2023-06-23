@@ -9,3 +9,9 @@ export type TPage = {
   title: string;
   content: string;
 };
+export type TKeyword = {
+  type: 'Page' | 'Link';
+  title: string;
+  path: string;
+  linkName?: string;
+};
