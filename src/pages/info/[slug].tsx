@@ -1,20 +1,24 @@
 import {getAllPosts, getPostBySlug} from '~/utils/api';
 import markdownToHtml from '~/utils/markdownToHtml';
 import React from 'react';
-import {type TPage} from '~/utils/types';
 import Head from 'next/head';
+
 type Props = {
-  post: TPage;
+  title: string;
   content: string;
 };
 
-const Page = ({post, content}: Props) => {
+const Page = ({title, content}: Props) => {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>{title}</title>
       </Head>
-      <article>{content}</article>
+      <h1 className="text-center text-3xl font-bold">{title}</h1>
+      <article
+        className="font-semibold leading-relaxed"
+        dangerouslySetInnerHTML={{__html: content}}
+      ></article>
     </>
   );
 };
@@ -33,10 +37,8 @@ export async function getStaticProps({params}: Params) {
 
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      ...post,
+      content,
     },
   };
 }
