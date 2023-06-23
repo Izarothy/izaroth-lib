@@ -32,18 +32,16 @@ const SearchPrompt = () => {
 
   return (
     <>
-      <section className="absolute h-screen w-screen">
-        <Command.Dialog
-          open={shown}
-          className="translate-y-[50%]} absolute left-1/2 top-1/4 order-2 w-1/3 translate-x-[-50%] rounded-md border border-gray bg-lighterdark p-2"
-        >
-          <Command.Input
-            className="w-full bg-lighterdark p-1 text-white outline-none"
-            placeholder="Search..."
-          />
-          {/* command group, item, separator */}
-        </Command.Dialog>
-      </section>
+      <Command.Dialog
+        open={shown}
+        className="translate-y-[50%]} absolute left-1/2 top-1/4 order-2 w-1/3 translate-x-[-50%] rounded-md border border-gray bg-lighterdark p-2"
+      >
+        <Command.Input
+          className="w-full bg-lighterdark p-1 text-white outline-none"
+          placeholder="Search..."
+        />
+        {/* command group, item, separator */}
+      </Command.Dialog>
     </>
   );
 };

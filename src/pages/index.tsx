@@ -7,9 +7,7 @@ export default function Home() {
         <title>Izaroth - Utilities</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <>
-        <div>Main</div>
-      </>
+      <></>
     </>
   );
 }
