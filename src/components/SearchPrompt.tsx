@@ -32,6 +32,9 @@ const SearchPrompt = () => {
 
   return (
     <>
+      <section
+        className={`${shown ? `absolute` : `hidden`} h-screen w-screen bg-dark/70`}
+      ></section>
       <Command.Dialog
         open={shown}
         className="translate-y-[50%]} absolute left-1/2 top-1/4 order-2 w-1/3 translate-x-[-50%] rounded-md border border-gray bg-lighterdark p-2"
