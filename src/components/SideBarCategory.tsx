@@ -1,22 +1,26 @@
 import React from 'react';
-import {type TPageLink} from '~/utils/types';
 import SideBarLink from './SideBarLink';
 
 type Props = {
   title: string;
+  postNames: string[];
 };
 
-const SideBarCategory = ({title}: Props) => {
-  // const filteredPages: TPageLink[] = pagesData.filter((page: TPageLink) => {
-  //   return page.category === title;
-  // });
+const SideBarCategory = ({title, postNames}: Props) => {
   return (
     <section className="my-8">
-      <span className="text-sm font-bold text-gray">{title}</span>
+      <span className="text-xs font-bold text-gray">{title}</span>
       <span className="my-3">
-        {/* {filteredPages.map((page: TPageLink) => {
-          return <SideBarLink {...page} key={page.name} />;
-        })} */}
+        {postNames.map(postName => {
+          return (
+            <SideBarLink
+              name={postName}
+              path={postName.toLowerCase().replace(' ', '-')}
+              category="Info"
+              key={postName}
+            />
+          );
+        })}
       </span>
     </section>
   );

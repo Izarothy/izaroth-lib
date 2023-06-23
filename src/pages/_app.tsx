@@ -6,7 +6,7 @@ import Layout from '~/components/Layout';
 import {Montserrat} from 'next/font/google';
 import {Provider} from 'react-redux';
 import {store} from '~/utils/store';
-
+import {api} from '~/utils/trpc';
 const montserrat = Montserrat({
   weight: ['400', '500', '600', '800'],
   style: ['normal', 'italic'],
@@ -38,4 +38,4 @@ const MyApp: AppType<{session: Session | null}> = ({
   );
 };
 
-export default MyApp;
+export default api.withTRPC(MyApp);

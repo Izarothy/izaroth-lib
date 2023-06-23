@@ -6,8 +6,8 @@ type Props = TPageLink;
 
 const SideBarLink = ({path, name}: Props) => {
   return (
-    <p className="text-lg">
-      <Link href={path}>{name}</Link>
+    <p className="hover:font-bold hover:text-blue">
+      <Link href={`/info/${path}`}>{name}</Link>
     </p>
   );
 };
