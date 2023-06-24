@@ -17,7 +17,8 @@ const SideBar = () => {
       <p className="text-xl font-bold">
         <Link href="/">Home</Link>
       </p>
-      <SideBarCategory title="Category 1" postNames={postNames} />
+      <SideBarCategory title="Tools" postNames={['Timer']} />
+      <SideBarCategory title="Info" postNames={postNames} />
     </aside>
   );
 };

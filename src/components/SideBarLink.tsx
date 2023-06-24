@@ -13,7 +13,7 @@ const SideBarLink = ({path, name}: Props) => {
         router.query.slug == path ? `font-bold text-blue` : ``
       } hover:font-bold hover:text-blue`}
     >
-      <Link href={`/info/${path}`}>{name}</Link>
+      <Link href={path}>{name}</Link>
     </p>
   );
 };
