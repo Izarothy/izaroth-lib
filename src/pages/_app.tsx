@@ -3,11 +3,11 @@ import {SessionProvider} from 'next-auth/react';
 import {type AppType} from 'next/app';
 import '~/styles/globals.css';
 import Layout from '~/components/Layout';
-import {Montserrat} from 'next/font/google';
+import {Poppins} from 'next/font/google';
 import {Provider} from 'react-redux';
 import {store} from '~/utils/store';
 import {api} from '~/utils/trpc';
-const montserrat = Montserrat({
+const poppins = Poppins({
   weight: ['400', '500', '600', '800'],
   style: ['normal', 'italic'],
   display: 'swap',
@@ -23,7 +23,7 @@ const MyApp: AppType<{session: Session | null}> = ({
       <style jsx global>
         {`
           html {
-            font-family: ${montserrat.style.fontFamily};
+            font-family: ${poppins.style.fontFamily};
           }
         `}
       </style>
