@@ -8,4 +8,6 @@ title: Webdev links
 [Trpc docs](https://trpc.io/docs/quickstart)
 [Redux starter](https://github.com/Izarothy/izaroth-lib/commit/8fbab09af9a9a971ccb3c93479971febbf9c1858)  
 [Nextjs docs](https://nextjs.org/docs)  
-[Search prompt](https://github.com/Izarothy/izaroth-lib/blob/main/src/components/SearchPrompt.tsx)
+[Search prompt](https://github.com/Izarothy/izaroth-lib/blob/main/src/components/SearchPrompt.tsx)  
+[JS playground](https://playcode.io/javascript)
+[Time format](https://github.com/Izarothy/izaroth-lib/blob/main/src/utils/formatTime.ts)
