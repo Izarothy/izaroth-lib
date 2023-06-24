@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button {
+  @apply rounded-md px-16 py-2 font-semibold;
+}
+
+h3 {
+  @apply text-xl font-semibold;
+}
