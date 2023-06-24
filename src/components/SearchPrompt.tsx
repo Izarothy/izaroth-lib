@@ -21,7 +21,11 @@ const SearchPrompt = () => {
     const matchingResults: TKeyword[] = [];
     if (keywords?.length && searchVal) {
       keywords.forEach(keyword => {
-        if (keyword?.linkName?.toLowerCase().includes(searchVal)) {
+        if (keyword.title.toLowerCase().includes(searchVal)) {
+          matchingResults.push(keyword);
+          return;
+        }
+        if (keyword.linkName?.toLowerCase().includes(searchVal)) {
           matchingResults.push(keyword);
         }
       });
@@ -73,15 +77,23 @@ const SearchPrompt = () => {
         />
         <section className="flex flex-col gap-2">
           {searchResults?.length > 0 &&
-            searchResults.map(({path, linkName, title}, idx) => {
+            searchResults.map(({type, path, linkName, title}, idx) => {
               if (idx < 5) {
-                return (
-                  <Link href={`/info/${path}`} key={idx}>
-                    <span className=" hover:text-blue">
-                      {linkName ? `${linkName}(${title})` : title}
-                    </span>
-                  </Link>
-                );
+                if (type === 'Page') {
+                  return (
+                    <Link href={`/info/${path}`} key={idx}>
+                      <span className=" hover:text-blue">{title}</span>
+                    </Link>
+                  );
+                } else {
+                  return (
+                    <a href={path} key={idx} target="_blank">
+                      <span className=" hover:text-blue">
+                        {linkName && `${linkName} (${title})`}
+                      </span>
+                    </a>
+                  );
+                }
               }
             })}
         </section>

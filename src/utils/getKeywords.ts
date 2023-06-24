@@ -8,9 +8,12 @@ const getKeywords = (pages: TPage[]) => {
 
     const linkNames = getLinkNames(page.content);
     linkNames.forEach(linkName => {
-      if (linkName.length > 1) {
-        keywords.push({type: 'Link', title: page.title, linkName, path: page.slug});
-      }
+      keywords.push({
+        type: 'Link',
+        title: page.title,
+        linkName: linkName.title,
+        path: linkName.url,
+      });
     });
   });
 
