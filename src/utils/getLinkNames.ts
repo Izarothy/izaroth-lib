@@ -11,7 +11,7 @@ const getLinkNames = (content: string) => {
     let linkTitle = line.replace('[', '').replace(']', '');
     linkTitle = linkTitle.slice(0, linkTitle.indexOf('('));
     let linkUrl = line.replace('(', '').replace(')', '');
-    linkUrl = linkUrl.slice(linkUrl.indexOf(']') + 1, -1);
+    linkUrl = linkUrl.slice(linkUrl.indexOf(']') + 1);
     linkNames.push({title: linkTitle, url: linkUrl});
   });
   return linkNames;
