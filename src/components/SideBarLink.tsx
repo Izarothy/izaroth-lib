@@ -7,12 +7,9 @@ type Props = TPageLink;
 
 const SideBarLink = ({path, name}: Props) => {
   const router = useRouter();
+
   return (
-    <p
-      className={`${
-        router.query.slug == path ? `font-bold text-blue` : ``
-      } hover:font-bold hover:text-blue`}
-    >
+    <p className={`${router.asPath == path ? ` text-blue` : ``} font-semibold  hover:text-blue`}>
       <Link href={path}>{name}</Link>
     </p>
   );
