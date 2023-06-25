@@ -11,3 +11,5 @@ title: Webdev links
 [Search prompt](https://github.com/Izarothy/izaroth-lib/blob/main/src/components/SearchPrompt.tsx)  
 [JS playground](https://playcode.io/javascript)
 [Time format](https://github.com/Izarothy/izaroth-lib/blob/main/src/utils/formatTime.ts)
+[OpenGraph tags](https://ogp.me/)
+[Vercel dash](https://vercel.com/dashboard)
