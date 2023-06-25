@@ -24,10 +24,20 @@ const MainTools = () => {
         <h3>Timer</h3>
         <section className="my-4 flex items-center justify-between">
           <span className="flex gap-4">
-            <button onClick={() => setTimerRunning(true)} className="bg-green-700">
+            <button
+              onClick={() => setTimerRunning(true)}
+              className={`${
+                timerRunning ? `bg-green-700` : `hover:bg-green-700`
+              } border border-green-700`}
+            >
               Start
             </button>
-            <button onClick={() => setTimerRunning(false)} className="bg-red-700">
+            <button
+              onClick={() => setTimerRunning(false)}
+              className={`${
+                !timerRunning ? `bg-red-700` : `hover:bg-red-700`
+              } border border-red-700`}
+            >
               Stop
             </button>
           </span>

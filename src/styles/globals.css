@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 button {
-  @apply rounded-md px-16 py-2 font-semibold;
+  @apply rounded-md px-8 py-2 font-semibold;
 }
 
 h3 {
