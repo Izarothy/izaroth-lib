@@ -13,7 +13,9 @@ const SideBarCategory = ({title, postNames}: Props) => {
       <span className="my-3">
         {postNames?.length &&
           postNames.map(postName => {
-            const postPath = `/${title.toLowerCase()}/${postName.toLowerCase().replace(' ', '-')}`;
+            const postPath = `/${title.toLowerCase()}/${postName
+              .toLowerCase()
+              .replaceAll(' ', '-')}`;
 
             return <SideBarLink name={postName} path={postPath} category={title} key={postName} />;
           })}
