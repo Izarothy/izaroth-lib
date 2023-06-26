@@ -18,7 +18,7 @@ const SideBar = () => {
         <Link href="/">Home</Link>
       </p>
       <SideBarCategory title="Tools" postNames={['Main Tools']} />
-      <SideBarCategory title="Info" postNames={postNames} />
+      {postNames.length && <SideBarCategory title="Info" postNames={postNames} />}
     </aside>
   );
 };
